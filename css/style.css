@@ -1,0 +1,178 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.only-sp {
+  display: none;
+}
+
+@media screen and (width: 699px) {
+  .only-sp {
+    display: block;
+  }
+  .only-pc {
+    display: none;
+  }
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+.content {
+  width: 77.5%;
+  margin: 0 auto;
+}
+
+.content h2 {
+  font-size: 36px;
+  line-height: 1.2;
+  margin: 110px auto 38px;
+  text-align: center;
+}
+
+.pickup_card {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 320px;
+          flex: 0 0 320px;
+  scroll-snap-align: center;
+}
+
+.pickup_card:not(:last-child) {
+  margin-right: 60px;
+}
+
+.pickup_card--wrapper {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: scroll;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
+  -ms-overflow-style: none;
+  /* IE, Edge 対応 */
+  scrollbar-width: none;
+  /* Firefox 対応 */
+}
+
+.pickup_card--wrapper::-webkit-scrollbar {
+  /* Chrome, Safari 対応 */
+  display: none;
+}
+
+.feature_card {
+  width: 31%;
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.16);
+          box-shadow: 0 0 8px rgba(0, 0, 0, 0.16);
+}
+
+.feature_card:not(:last-child) {
+  margin-right: 26px;
+}
+
+.feature_card:nth-child(3n) {
+  margin-right: 0;
+}
+
+.feature_card:not(:nth-child(-n+3)) {
+  margin-top: 26px;
+}
+
+.feature_card--wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.feature_card--txt {
+  margin-top: -6px;
+  padding: 31px 32px 28px 33px;
+  border: 1px solid #ccc;
+  border-top: 0;
+  color: #121212;
+}
+
+.feature_card--txt--cat, .feature_card--txt--date {
+  font-size: 12px;
+}
+
+.feature_card--txt--body {
+  font-size: 14.4px;
+  margin-top: 24px;
+}
+
+.feature_card--txt--date {
+  text-align: right;
+  margin-top: 41px;
+}
+
+.contact {
+  margin-top: 60px;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  padding-bottom: 81px;
+  background: #121212;
+  color: #fff;
+}
+
+.contact h2 {
+  margin: 0;
+  padding: 49px 0 32px;
+}
+
+.contact_card {
+  width: 42.3%;
+}
+
+.contact_card:first-child {
+  margin-right: 139px;
+}
+
+.contact_card p {
+  font-size: 14.4px;
+}
+
+.contact_card p:nth-child(2) {
+  margin-top: 36px;
+}
+
+.contact_card p:last-child {
+  margin-top: 28px;
+}
+
+.contact_card--wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 77.5%;
+  margin: 0 auto;
+}
+
+.contact_form input, .contact_form textarea {
+  width: 100%;
+}
+/*# sourceMappingURL=style.css.map */

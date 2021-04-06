@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@mixin bg_over {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+
+.only-sp {
+    display: none;
+}
+
+@media screen and (width: 699px) {
+    .only-sp {
+        display: block;
+    }
+
+    .only-pc {
+        display: none;
+    }
+}
+
+ul li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+.content {
+    width: 77.5%;
+    margin: 0 auto;
+
+    h2 {
+        font-size: 36px;
+        line-height: 1.2;
+        margin: 110px auto 38px;
+        text-align: center;
+    }
+    
+}
+
+.pickup {
+    &_card {
+        flex: 0 0 320px;
+        scroll-snap-align:center;
+        &:not(:last-child) {
+            margin-right: 60px;
+        }
+        &--wrapper {
+            @include bg_over();
+            display: flex;
+            overflow-x: scroll;
+            scroll-snap-type: x mandatory;
+            -ms-overflow-style: none;    /* IE, Edge 対応 */
+            scrollbar-width: none;       /* Firefox 対応 */
+            &::-webkit-scrollbar {  /* Chrome, Safari 対応 */
+                display:none;
+            }
+        }
+        
+    }
+}
+
+.feature {
+    &_card {
+        width: 31%;
+        box-shadow: 0 0 8px rgba(0,0,0,.16);
+        &:not(:last-child){
+            margin-right :26px;
+        }
+        &:nth-child(3n) {
+            margin-right: 0;
+        }
+        &:not(:nth-child(-n+3)) {
+            margin-top: 26px;
+        }
+        &--wrapper {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        &--txt {
+            margin-top: -6px;
+            padding: 31px 32px 28px 33px;
+            border: 1px solid #ccc;
+            border-top: 0;
+            color: #121212;
+            &--cat,&--date {
+                font-size: 12px;
+            }
+            &--body {
+                font-size: 14.4px;
+                margin-top: 24px;
+            }
+            &--date {
+                text-align: right;
+                margin-top: 41px;
+            }
+        }
+    }
+}
+
+.contact {
+    margin-top: 60px;
+    @include bg_over();
+    padding-bottom: 81px;
+    background: #121212;
+    color: #fff;
+    h2 {
+        margin: 0;
+        padding: 49px 0 32px;
+    }
+    &_card {
+        width: 42.3%;
+        &:first-child {
+            margin-right: 139px;
+        }
+        p {
+            font-size: 14.4px;
+            &:nth-child(2) {
+                margin-top: 36px; 
+            }
+            &:last-child {
+                margin-top: 28px;
+            }
+        }
+        &--wrapper {
+            display: flex;
+            width: 77.5%;
+            margin: 0 auto;
+        }
+    }
+    &_form {
+        input,textarea {
+            width: 100%;
+        }
+    }
+}
